@@ -8,7 +8,8 @@ Vagrant.configure("2") do |config|
     end
   
     config.vm.boot_timeout = 1000 
-    config.vm.provision "file", source: "comand1.sql", destination: "/home/vagrant/comand1.sql.sql"
-    config.vm.provision "file", source: "comand2.sql", destination: "/home/vagrant/comand2.sql.sql"
+    config.vm.provision "file", source: "comand1.sql", destination: "/home/vagrant/comand1.sql"
+    config.vm.provision "file", source: "comand2.sql", destination: "/home/vagrant/comand2.sql"
     config.vm.provision "shell", path: "config-serv-ubuntu.sh"
+    
   end
